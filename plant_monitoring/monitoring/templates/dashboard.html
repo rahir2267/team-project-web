@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Health Dashboard</title>
+</head>
+<body>
+    <h1>Plant Health Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Temperature</th>
+                <th>Humidity</th>
+                <th>Soil Moisture</th>
+                <th>Air Quality</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in plant_data %}
+                <tr>
+                    <td>{{ data.temperature }}</td>
+                    <td>{{ data.humidity }}</td>
+                    <td>{{ data.soil_moisture }}</td>
+                    <td>{{ data.air_quality }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
